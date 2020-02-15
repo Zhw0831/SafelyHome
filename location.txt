@@ -1,0 +1,32 @@
+import UIKit
+import MapKit
+import CoreLocation
+
+class viewController: UIViewController, CLLocationManagerDelegate{
+
+    @IBOutlet weak var map: MKMapView!
+
+    var locationManager = CLLocationManager()
+
+    override func viewDidLoad(){
+        super.viewDidLoad()
+        self.locationManager.requestWhenInUseAuthorization()
+
+        if CLLocationManager.locationServicesEnabled(){
+            locationManager.delegate = self
+            locationManager.desireAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+    }
+
+    override func didReceiveMemoryWarning(){
+        super.didReceiveMemoryWaring()
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locValue: CLLocationCoordinate2D = manager.location!.coordinate
+        print("locations = \(locValue.latitude)\(locValue.longitude)")
+        let userLocation = locations.last
+        let viewRegion = MKCoordinateRegionMakeWithDistance((userLocation?.coordinate)!,600,600)
+        self.map.setRegion(viewRegion,animated:true)
+}
