@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  temp
+//  homesafely
 //
 //  Created by Hope Martin on 2/14/20.
 //  Copyright © 2020 Hope Martin. All rights reserved.
@@ -10,11 +10,46 @@ import UIKit
 
 class ViewController: UIViewController {
 
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    @IBAction func textboxSavedLocationSettings(_ sender: UITextField) {
+        //Text in saved location 1 in settings
+    }
+    
+    @IBAction func textboxSavedLocation2(_ sender: Any) {
+        //Text saved in location 2 in settings
+    }
+    
+    @IBAction func textboxSavedLocation3(_ sender: Any) {
+        //Text saved in location 2 in settings
+    }
+    
+    @IBAction func switchSettingsDefaultLocation1(_ sender: Any) {
+    }
+    @IBAction func switchSettingsDefaultLocation2(_ sender: Any) {
+    }
+    @IBAction func switchSettingsDefaultLocation3(_ sender: Any) {
+    }
+    
+    @IBAction func buttonMessageSelectingContacts(_ sender: Any) {
+    }
+    @IBAction func switchMessageLocation1(_ sender: Any) {
+    }
+    @IBAction func switchMessageLocation2(_ sender: Any) {
+    }
+    @IBAction func switchMessageLocation3(_ sender: Any) {
+    }
+    @IBAction func textboxMessageContent(_ sender: Any) {
+    }
+    @IBAction func textfieldMessagesLocation1(_ sender: Any) {
+    }
+    
+    @IBAction func textfieldMessagesLocation2(_ sender: Any) {
+    }
+    @IBAction func textfieldMessagesLocation3(_ sender: Any) {
+    }
 }
-
